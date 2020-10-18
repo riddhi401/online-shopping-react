@@ -1,0 +1,26 @@
+
+      return(
+          
+        <div className="products">
+        {products.map(product => (
+            <div className="product" key={product.id}>
+              <div className="pro">
+            <div className="productImage">
+              <img src={product.image} alt="Not found"/>
+            </div>
+            <div className="productDetails">
+                <div className="proName">
+                 <h4>{product.name}</h4>
+                </div>
+               <div className="proPrice">
+                   ${product.price}.00
+               </div>
+            </div>
+            </div>
+            </div>
+        ))}
+        
+        </div>
+      
+      
+      )

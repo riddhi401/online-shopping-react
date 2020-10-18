@@ -1,0 +1,31 @@
+import React,{useContext} from 'react'
+import {addproductContext} from "../Global/ProductContext";
+
+const Product = () => {
+
+    const {products} = useContext(addproductContext);
+    return (
+        <div className="products">
+            {products.map(productnew =>(
+                <div className="product" key={productnew.id}>
+                <div className="product-image">
+                    <img src={productnew.image} alt="not found"/>
+                </div>
+                <div className="product-details">
+                    <div className="product-name">
+                        {productnew.name}
+                    </div>
+                    <div className="product-price">
+                        {productnew.price}
+                    </div>
+                </div>
+                </div>
+            )) }
+
+        </div>
+    )
+}
+
+
+export default Product;
+
